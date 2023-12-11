@@ -1,10 +1,14 @@
 import { title } from "@/components/primitives";
 import { Button } from "@nextui-org/button";
+import { Card, CardBody } from "@nextui-org/card"
 
 export default function AboutPage() {
 	return (
-		<div>
+			<>
 			<h1 className={title()}>Create Your Todo!!</h1>
+			<section className="flex flex-col items-center justify-center gap-4 py-10 md:py-10 h-full">
+			<Card className="border-none bg-red-500 ">
+				<CardBody>
 			<form action="" method="post" className="py-20">
 				<div className="">
 					<label htmlFor="name">Todo   </label>
@@ -21,6 +25,9 @@ export default function AboutPage() {
 					<Button><input type="submit" value="submit"/></Button>
 				</div>
 			</form>
-		</div>
+			</CardBody>
+		</Card>
+		</section>
+		</>
 	);
 }
