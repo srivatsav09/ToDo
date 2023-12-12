@@ -7,7 +7,7 @@ export default function AboutPage() {
 			<>
 			<h1 className={title()}>Create Your Todo!!</h1>
 			<section className="flex flex-col items-center justify-center gap-4 py-10 md:py-10 h-full">
-			<Card className="border-none bg-red-500 ">
+			<Card className="border-none bg-purple-800 ">
 				<CardBody>
 			<form action="" method="post" className="py-20">
 				<div className="">
