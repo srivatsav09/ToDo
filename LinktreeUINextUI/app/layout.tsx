@@ -40,8 +40,8 @@ export default function RootLayout({
 			>
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
 					<div className="relative flex flex-col h-screen">
-						<Navbar />
-						<main className="container mx-auto max-w-full px-6 flex-grow bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black">
+						{/* <Navbar /> */}
+						<main className="container mx-auto max-w-full px-6 flex-grow bg-orange-400">
 							{children}
 						</main>
 					</div>
@@ -50,3 +50,5 @@ export default function RootLayout({
 		</html>
 	);
 }
+
+// bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black

@@ -1,7 +1,9 @@
-import { Card, CardBody } from "@nextui-org/card"
+import { Card, CardBody, CardHeader } from "@nextui-org/card"
+import { Button } from "@nextui-org/button";
 import { Chip } from "@nextui-org/chip"
 import Image from "next/image"
 import { siteConfig } from "@/config/site";
+
 
 /*
 	Create a Card for our linktree to live in
@@ -13,9 +15,9 @@ import { siteConfig } from "@/config/site";
 
 export default function Home() {
 	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-2 md:py-10 h-full">
+		<section className="flex flex-col items-center justify-center gap-1 py-0 md:py-5 h-full">
 			
-			<Card shadow="lg">
+			{/* <Card isBlurred shadow="lg">
 				<CardBody>
 					<div className="flex flex-col w-full">
 						<div className="flex justify-center">
@@ -83,7 +85,107 @@ export default function Home() {
 						</div>
 					</div>
 				</CardBody>
-			</Card>
+			</Card> */}
+			<br />
+			<Card
+      isBlurred
+      className="flex flex-col border-none bg-background/60 dark:bg-default-100/30 max-w-[1100px]"
+      shadow="sm"
+    >
+    {/* <CardHeader className="absolute z-10 top-1 flex-col !items-start">
+        <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
+        <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
+		<br />
+      </CardHeader> */}
+	  <CardBody>
+	  <Image
+        alt="Card background"
+        className="z-0 w-full h-full object-cover"
+		src="/wp1.jpg"
+		width={900}
+		height={900}
+      />
+	  </CardBody>
+      
+    </Card>
+	<br />
+	{/* <Card
+      isBlurred
+      className="border-none bg-background/60 dark:bg-default-100/50 max-w-[610px]"
+      shadow="sm"
+    >
+      <CardBody>
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
+          <div className="relative col-span-6 md:col-span-4">
+            <Image
+              alt="Album cover"
+              className="object-cover"
+              height={200}
+              src="/wp1.jpg"
+              width={200}
+            />
+          </div>
+
+          <div className="flex flex-col col-span-6 md:col-span-8">
+            <div className="flex justify-between items-start">
+              <div className="flex flex-col gap-0">
+                <h3 className="font-semibold text-foreground/90">Daily Mix</h3>
+                <p className="text-small text-foreground/80">12 Tracks</p>
+                <h1 className="text-large font-medium mt-2">Frontend Radio</h1>
+              </div>
+              <Button
+                isIconOnly
+                className="text-default-900/60 data-[hover]:bg-foreground/10 -translate-y-2 translate-x-2"
+                radius="full"
+                variant="light"
+              >hi
+              </Button>
+            </div>
+
+            <div className="flex flex-col mt-3 gap-1">
+
+            <div className="flex w-full items-center justify-center">
+              <Button
+                isIconOnly
+                className="data-[hover]:bg-foreground/10"
+                radius="full"
+                variant="light"
+              >
+              </Button>
+              <Button
+                isIconOnly
+                className="data-[hover]:bg-foreground/10"
+                radius="full"
+                variant="light"
+              >
+              </Button>
+              <Button
+                isIconOnly
+                className="w-auto h-auto data-[hover]:bg-foreground/10"
+                radius="full"
+                variant="light"
+              >
+              </Button>
+              <Button
+                isIconOnly
+                className="data-[hover]:bg-foreground/10"
+                radius="full"
+                variant="light"
+              >
+              </Button>
+              <Button
+                isIconOnly
+                className="data-[hover]:bg-foreground/10"
+                radius="full"
+                variant="light"
+              >
+              </Button>
+            </div>
+          </div>
+        </div>
+		</div>
+      </CardBody>
+    </Card> */}
 		</section>
 	);
 }
