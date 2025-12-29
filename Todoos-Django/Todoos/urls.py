@@ -17,14 +17,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from api import views
+from api import auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Authentication endpoints
+    path('api/auth/register', auth_views.RegisterView.as_view(), name='register'),
+    path('api/auth/login', auth_views.LoginView.as_view(), name='login'),
+    path('api/auth/logout', auth_views.LogoutView.as_view(), name='logout'),
+    path('api/auth/user', auth_views.CurrentUserView.as_view(), name='current-user'),
+    # Todo endpoints
     path('api/todos', views.TodoCompleteList.as_view()),
     path('api/todos/create', views.TodoListCreate.as_view()),
     path('api/todos/search/', views.TodoSearchView.as_view(), name='search'),
     path('api/todos/bulkdel', views.BulkDeleteView.as_view()),
-    path('api/todos/bulkcom', views.BulkDeleteView.as_view()),
+    path('api/todos/bulkcom', views.BulkCompleteView.as_view()),
     path('api/todos/<int:pk>', views.TodoRetrieveDestroy.as_view()),
     path('api/todos/<int:pk>/complete', views.TodoComplete.as_view()),
     path('api/todos/completed', views.TodosFinished.as_view()),
